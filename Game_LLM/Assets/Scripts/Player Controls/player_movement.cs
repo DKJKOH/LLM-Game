@@ -50,15 +50,43 @@ public class player_movement : MonoBehaviour
         // If player is afk for a set amount of time
         if ((Mathf.Abs(Time.time - time_of_last_movement)) > 2f)
         {
-            // Set game trigger to activate idle animation
+            // Set bored to true to activate idle animation
             gameObject.GetComponent<Animator>().SetBool("Bored", true);
         }
         else
         {
-            // Trigger to get out of bored idle animation
+            // Set bored to false to get out of bored idle animation
             gameObject.GetComponent<Animator>().SetBool("Bored", false);
         }
 
+
+        // Walking animation stuff
+
+        // If player is moving
+        if (gameObject.GetComponent<Rigidbody2D>().velocity != Vector2.zero)
+        {
+            // Set Walking to true to activate walking animation
+            gameObject.GetComponent<Animator>().SetBool("Walking", true);
+
+            // If user is pressing shift
+            if (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift))
+            {
+                // Set Running to true to start running animation
+                gameObject.GetComponent<Animator>().SetBool("Running", true);
+            }
+            else
+            {
+                // Set Running to false to start walking animation
+                gameObject.GetComponent<Animator>().SetBool("Running", false);
+            }
+        }
+        // Player is not moving
+        else
+        {
+            // Stop walking and running animation
+            gameObject.GetComponent<Animator>().SetBool("Walking", false);
+            gameObject.GetComponent<Animator>().SetBool("Running", false);
+        }
     }
 
     private void FixedUpdate()
