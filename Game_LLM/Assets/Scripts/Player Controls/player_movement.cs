@@ -15,6 +15,9 @@ public class player_movement : MonoBehaviour
     [SerializeField] float run_speed = 4f;
     Vector2 playerMovement;
 
+    // Get last mouse position
+    Vector3 lastMousePosition;
+    float time_of_last_movement;
     // Start is called before the first frame update
     void Start()
     {
@@ -33,6 +36,28 @@ public class player_movement : MonoBehaviour
 
         // Normalize vector to ensure vertical and horizontal inputs are the same
         playerMovement.Normalize();
+
+        // If player moves / rotates
+        if (Vector3.Magnitude(Input.mousePosition - lastMousePosition) > 0 || gameObject.GetComponent<Rigidbody2D>().velocity != Vector2.zero)
+        {
+            // Update time of last movement as current time.
+            time_of_last_movement = Time.time;
+        }
+
+        // Save current mouse position to last mouse position to compare if the user is afk
+        lastMousePosition = Input.mousePosition;
+
+        // If player is afk for a set amount of time
+        if ((Mathf.Abs(Time.time - time_of_last_movement)) > 2f)
+        {
+            // Set game trigger to activate idle animation
+            gameObject.GetComponent<Animator>().SetBool("Bored", true);
+        }
+        else
+        {
+            // Trigger to get out of bored idle animation
+            gameObject.GetComponent<Animator>().SetBool("Bored", false);
+        }
 
     }
 
