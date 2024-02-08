@@ -1,11 +1,23 @@
 using System;
+// Used for coroutine functionality
 using System.Collections;
 using System.Collections.Generic;
+using System.Net;
 using UnityEditor;
 using UnityEngine;
 
+// For stamina bar UI
+using UnityEngine.UI;
+
 public class player_movement : MonoBehaviour
 {
+    // Stamina Bar
+    public Image Stamina_Bar;
+    public float Max_Stamina, Stamina;
+    public float Run_Cost;
+    private Coroutine Recharge_Stamina;
+    public float Recharge_Stamina_Rate;
+
     // Values to store horizontal and vertical movement
     float HorizontalInput;
     float VerticalInput;
@@ -69,10 +81,25 @@ public class player_movement : MonoBehaviour
             gameObject.GetComponent<Animator>().SetBool("Walking", true);
 
             // If user is pressing shift
-            if (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift))
+            if ((Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift)) && Stamina > 0)
             {
                 // Set Running to true to start running animation
                 gameObject.GetComponent<Animator>().SetBool("Running", true);
+
+                // Reduce current amount of stamina
+                Stamina -= Run_Cost * Time.deltaTime;
+
+                // Ensure that stanima is not lesser than 0
+                if (Stamina < 0) Stamina = 0;
+
+                // fill Amount controls the size of the current stamina left
+                Stamina_Bar.fillAmount = Stamina / Max_Stamina;
+
+                // If there is a coroutine happening
+                if (Recharge_Stamina != null) StopCoroutine(Recharge_Stamina);
+
+                // Start coroutine 
+                Recharge_Stamina = StartCoroutine(Charge_Stamina());
             }
             else
             {
@@ -89,10 +116,33 @@ public class player_movement : MonoBehaviour
         }
     }
 
+    private IEnumerator Charge_Stamina()
+    {
+        yield return new WaitForSeconds(1f);
+
+        // If stamina bar is not full
+        while (Stamina < Max_Stamina)
+        {
+            Stamina += Recharge_Stamina_Rate / 10f;
+
+            // Ensures that stamina does not exceed maximum stamina
+            if (Stamina > Max_Stamina)
+            {
+                Stamina = Max_Stamina;
+            }
+
+            // Resize stamina bar
+            Stamina_Bar.fillAmount = Stamina / Max_Stamina;
+
+            // Wait for 1/10th of a second, before the while loop starts again.
+            yield return new WaitForSeconds(.1f);
+        }
+    }
+
     private void FixedUpdate()
     {
         // If User presses Shift key
-        if (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift))
+        if ((Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift)) && Stamina > 0)
         {
             // Character runs
             gameObject.GetComponent<Rigidbody2D>().velocity = playerMovement * run_speed;
