@@ -936,6 +936,8 @@ GameObject:
   - component: {fileID: 611102905}
   - component: {fileID: 611102906}
   - component: {fileID: 611102907}
+  - component: {fileID: 611102908}
+  - component: {fileID: 611102909}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -1137,6 +1139,122 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.4559366, y: 1.2467647}
   m_EdgeRadius: 0
+--- !u!114 &611102908
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 611102900}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23d64eaedc987604aa8eacf7a1d3e683, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  walking_sounds:
+  - {fileID: 8300000, guid: 12d25cc3fe7565d4baeeb02a8b0af5c8, type: 3}
+  - {fileID: 8300000, guid: aa778bfc41ab7ea488d627931657d64d, type: 3}
+  - {fileID: 8300000, guid: 9049e5c5bcde01e4abf81c4fdf1380c2, type: 3}
+  - {fileID: 8300000, guid: fd541aee4cd4c524e8bd41a7f6b0d6d4, type: 3}
+  - {fileID: 8300000, guid: d2207e97450a92e44863541097ab3b8e, type: 3}
+  - {fileID: 8300000, guid: b138d9c24a1cd3347868fbc523de4c6c, type: 3}
+  running_sounds: []
+--- !u!82 &611102909
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 611102900}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &709589456
 GameObject:
   m_ObjectHideFlags: 0
@@ -1166,7 +1284,7 @@ Light:
   m_Type: 1
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 0.34
+  m_Intensity: 0.32
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -1178,7 +1296,7 @@ Light:
     m_Strength: 1
     m_Bias: 0.05
     m_NormalBias: 0.4
-    m_NearPlane: 0.2
+    m_NearPlane: 0.1
     m_CullingMatrixOverride:
       e00: 1
       e01: 0
@@ -1225,7 +1343,7 @@ Transform:
   m_GameObject: {fileID: 709589456}
   serializedVersion: 2
   m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
-  m_LocalPosition: {x: 2.6904788, y: -1.5396632, z: -22.834982}
+  m_LocalPosition: {x: -2.83, y: -1.51, z: -22.834982}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1302,7 +1420,7 @@ Light:
   m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
-  m_BounceIntensity: 8
+  m_BounceIntensity: 6.89
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
@@ -1355,8 +1473,8 @@ Light:
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 11.59
-  m_Range: 4.49
-  m_SpotAngle: 59.3
+  m_Range: 4.59
+  m_SpotAngle: 68.7
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
@@ -1413,7 +1531,7 @@ Transform:
   m_GameObject: {fileID: 767196203}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.36, y: -0.29, z: -4.4}
+  m_LocalPosition: {x: 10.83, y: 14.85, z: -4.4}
   m_LocalScale: {x: 1, y: 1, z: 1.6235}
   m_ConstrainProportionsScale: 0
   m_Children: []
