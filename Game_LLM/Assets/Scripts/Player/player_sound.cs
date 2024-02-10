@@ -46,7 +46,7 @@ public class player_sound : MonoBehaviour
         // Walking
         else
         {
-            footstep_source.volume = Random.Range(0.1f, 0.2f);
+            //footstep_source.volume = Random.Range(0.f, 0.2f);
 
             // Randomly select a sound in the list of walking sounds
             audioClip = walking_sounds[Random.Range(0, walking_sounds.Count)];

@@ -1067,11 +1067,30 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 855feead9fa93f244bb00955afb54cbb, type: 3}
   - {fileID: 8300000, guid: 90eefba26aaad2542be22f23b9c371e7, type: 3}
   running_sounds:
-  - {fileID: 8300000, guid: da3dee5041efc50438149b90a0cb1a07, type: 3}
-  - {fileID: 8300000, guid: dcf6149a8e333024a8365a8dfda2e3df, type: 3}
-  - {fileID: 8300000, guid: a1e1ff5ae22d49147b60ffdb4a83ba6f, type: 3}
-  - {fileID: 8300000, guid: 2e0d4c45d6c133b49907e6c177a51751, type: 3}
-  - {fileID: 8300000, guid: cf62c2ead80f09f4aae29084a07468a5, type: 3}
+  - {fileID: 8300000, guid: efd470c4cfeab254bb3aca8347420888, type: 3}
+  - {fileID: 8300000, guid: 525e6f1eab362bf4ba27895ab6c81a5c, type: 3}
+  - {fileID: 8300000, guid: d26e9a86c3f341840a3140f272200e88, type: 3}
+  - {fileID: 8300000, guid: 6965ba73944f12e4ea24aabf8d7a0ef3, type: 3}
+  - {fileID: 8300000, guid: 84513d8dd170cab468da3c789c2a002d, type: 3}
+  - {fileID: 8300000, guid: 446af25b19f23c54cba61e746a02d759, type: 3}
+  - {fileID: 8300000, guid: 6f586e8956eecee49ae9f37a0d4ec493, type: 3}
+  - {fileID: 8300000, guid: 5ac8cdd0370b4344e952be6b4eb723ac, type: 3}
+  - {fileID: 8300000, guid: b0f0f6c4103969b4dabf85273a13cb2b, type: 3}
+  - {fileID: 8300000, guid: 2fb3d1ff239f58e49987bab3879a84df, type: 3}
+  - {fileID: 8300000, guid: 606cab54796e9844fb820de5de6e1b22, type: 3}
+  - {fileID: 8300000, guid: a558b063b7570aa479f246617e8c3169, type: 3}
+  - {fileID: 8300000, guid: f424297139ad02e4c9d1ba3f31c76301, type: 3}
+  - {fileID: 8300000, guid: d0ee981886bdabf4bb4ecb526aff5391, type: 3}
+  - {fileID: 8300000, guid: 9e6492460346e664badd1c4b31df0253, type: 3}
+  - {fileID: 8300000, guid: 1e2c71a685a2a4447a90673f0666c929, type: 3}
+  - {fileID: 8300000, guid: d27e8b5e5a197d64e9c23c18ba606e83, type: 3}
+  - {fileID: 8300000, guid: 9319fe07bd6f3534e93b30326a7157ef, type: 3}
+  - {fileID: 8300000, guid: c0ee85f8b53f0d546838284e50429a2b, type: 3}
+  - {fileID: 8300000, guid: 8a4179687655a6f4aa99170880f94695, type: 3}
+  - {fileID: 8300000, guid: 2d41a261846aac54daa16d4f125c8d3e, type: 3}
+  - {fileID: 8300000, guid: a017335f8dca56647bb36d1603177c81, type: 3}
+  - {fileID: 8300000, guid: 975aa6c18487ae6458337e228448dd8d, type: 3}
+  - {fileID: 8300000, guid: 417f83455995cec4eb409f1b6d87dcdb, type: 3}
   bored_idle_sounds:
   - {fileID: 8300000, guid: 5a24e52865ea66d40a98e3d01c669a9f, type: 3}
   - {fileID: 8300000, guid: a3bc07111d53d4d48a5f561d6fba4dc1, type: 3}
