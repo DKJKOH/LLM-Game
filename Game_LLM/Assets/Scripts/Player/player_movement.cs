@@ -13,9 +13,17 @@ public class player_movement : MonoBehaviour
 {
     // Stamina Bar
     public Image Stamina_Bar;
+
+    // Maximum stamina and current stamina values
     public float Max_Stamina, Stamina;
+
+    // What is the cost of running?
     public float Run_Cost;
+
+    // Coroutine to recharge stamina over time
     private Coroutine Recharge_Stamina;
+
+    // How fast does the stamina recharge when not running
     public float Recharge_Stamina_Rate;
 
     // Values to store horizontal and vertical movement
@@ -30,10 +38,11 @@ public class player_movement : MonoBehaviour
     // Get last mouse position
     Vector3 lastMousePosition;
     float time_of_last_movement;
+
     // Start is called before the first frame update
     void Start()
     {
-    
+        
     }
 
     // Update is called once per frame
@@ -73,7 +82,6 @@ public class player_movement : MonoBehaviour
 
 
         // Walking animation stuff
-
         // If player is moving
         if (gameObject.GetComponent<Rigidbody2D>().velocity != Vector2.zero)
         {
