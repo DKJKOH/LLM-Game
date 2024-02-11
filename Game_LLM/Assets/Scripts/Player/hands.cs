@@ -18,27 +18,24 @@ public class hands : MonoBehaviour
     // Max distance the gun can be away from player
     public float max_distance_threshold;
 
-    // Text Prompt for picking up / dropping weapon
-    public TextMesh text_UI;
-
     // Start is called before the first frame update
     void Start()
     {
         // Get player animator (Running / Walking / Idle / Bored walking thing)
         player_animator = gameObject.transform.parent.GetComponent<Animator>();
 
-        // Finds object in hand
-        object_in_hand = find_item_on_hand();
-
         // Set inital acceleration value
         acceleration_value = 10;
+
+        // Finds object in hand
+        object_in_hand = find_item_on_hand();
     }
 
     // Function which checks for item the player is currently holding (TRY NOT TO RUN THIS IN UPDATE FUNCTION)
     GameObject find_item_on_hand()
     {
         // If player is not holding anything, do not run this function
-        if (transform.childCount <= 0) return null;
+        if (gameObject.transform.childCount <= 0) return null;
 
         // Cycle through all childrens in current game object to find the item the player is holding
         foreach (Transform child in gameObject.transform)
@@ -54,62 +51,43 @@ public class hands : MonoBehaviour
     void disable_hands_when_running()
     {
         // If player is not holding anything, do not run this function
-        if (transform.childCount <= 0 || object_in_hand == null) return;
+        if (transform.childCount <= 0) return;
+        
 
-        // Player is unable to shoot / aim when running
-        if (player_animator.GetBool("Running"))
+        GameObject holding_object = gameObject.transform.GetChild(0).gameObject;
+
+        if (gameObject.transform.parent.GetComponent<player_movement>().Stamina > 0  
+            && (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift))
+            && holding_object.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("idle")
+            )
         {
-            // Disable weapon on hand
-            object_in_hand.SetActive(false);
+            // Disable weapon on hands
+            gameObject.transform.GetChild(0).gameObject.SetActive(false);
         }
         // Player can to shoot / aim when walking
-        else
+        
+        if(Input.GetKeyUp(KeyCode.LeftShift) || Input.GetKeyUp(KeyCode.RightShift))
         {
+           
             // Enable weapon on hand
-            object_in_hand.SetActive(true);
+            gameObject.transform.GetChild(0).gameObject.SetActive(true);
         }
-    }
-
-    // This function removes the parent 
-    void drop_grabbable_object(GameObject grabbable_object)
-    {
-        // If nothing is on hand, do not do anything
-        if (grabbable_object == null) return;
-
-        // Remove parent of object
-        grabbable_object.transform.SetParent(null);
-
-        // Set remove current grabbable_object
-        object_in_hand = null;
-    }
-
-    void pickup_grabbable_object(GameObject grabbable_object)
-    {
-        // If user has something on hand, cannot pick up item
-        if (object_in_hand != null) return;
-
-        // Set object in hand to be the grabbable object
-        object_in_hand = grabbable_object;
-
-        // Set parent of grabbable object to be the hand
-        grabbable_object.transform.SetParent(gameObject.transform);
-
-        grabbable_object.transform.position = gameObject.transform.position;
-
-        grabbable_object.transform.rotation = gameObject.transform.rotation;
     }
     
     void move_grabbable_object()
     {
         // Do not do anything if there is nothing on hand
-        if (object_in_hand == null) return;
+        if (gameObject.transform.childCount <= 0)
+        {
+            return;
+        }
 
         // Find hand position
         Vector2 hand_position = gameObject.transform.position;
 
         // Grabbed object position
-        Vector2 grabbed_object_position = object_in_hand.transform.position;
-        Rigidbody2D grabbed_object_rb = object_in_hand.GetComponent<Rigidbody2D>();
+        Vector2 grabbed_object_position = gameObject.transform.GetChild(0).position;
+        Rigidbody2D grabbed_object_rb = gameObject.transform.GetChild(0).GetComponent<Rigidbody2D>();
 
         Vector2 direction = (hand_position - grabbed_object_position).normalized;
 
@@ -117,12 +95,12 @@ public class hands : MonoBehaviour
         float distance_hand_object = Vector3.Distance(hand_position, grabbed_object_position);
 
         // Rotate the object in hand
-        object_in_hand.transform.rotation = gameObject.transform.rotation;
+        gameObject.transform.GetChild(0).rotation = gameObject.transform.rotation;
 
         // If object in hand is moved too far away, teleport it towards the player's hand
         if (distance_hand_object < max_distance_threshold)
         {
-            object_in_hand.transform.position = hand_position;
+            gameObject.transform.GetChild(0).position = hand_position;
         }
 
         // If object in hand is further than current hand position, do not apply velocity to the object in hand
@@ -130,38 +108,15 @@ public class hands : MonoBehaviour
         else
         {
             // Accelerate the object in hand towards hand position
-            object_in_hand.transform.position = Vector2.Lerp(grabbed_object_position, hand_position, acceleration_value);
+            gameObject.transform.GetChild(0).position = Vector2.Lerp(grabbed_object_position, hand_position, acceleration_value);
         }
-    }
-
-    IEnumerator eraseTextAfterSomeTime(float time)
-    {
-        yield return new WaitForSeconds(time);
-
-        text_UI.text = "";
     }
 
     // Update is called once per frame
     void Update()
     {
-        // Ensures that the texts are facing the correct direction (upwards positive y direction)
-        text_UI.transform.rotation = Quaternion.Euler(0f, 0f, 0f);
-
         // Disables hands when player is running
         disable_hands_when_running();
-
-        // If user presses "Q"
-        if (Input.GetKey("q") && object_in_hand != null)
-        {
-            // Tells user that object on hand has been dropped
-            text_UI.text = object_in_hand.name + " Dropped!";
-
-            // Erase text_UI after 1 second
-            StartCoroutine(eraseTextAfterSomeTime(1));
-
-            // Drop object on hand
-            drop_grabbable_object(find_item_on_hand());
-        }
 
         // Get current mouse position 
         Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -170,36 +125,11 @@ public class hands : MonoBehaviour
         Vector3 direction = mousePos - transform.position;
 
         // Convert direction to angle
-        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg - 90f;
+        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
 
         // Rotate object about z axis
         transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
     }
-
-    // If Hand is able to reach the grabbable object
-    void OnTriggerStay2D(Collider2D collided_object)
-    {
-        
-
-        if (collided_object.CompareTag("Grabbable_Object") && object_in_hand == null)
-        {
-            // Ensures that the texts are facing the correct direction (upwards positive y direction)
-            text_UI.transform.rotation = Quaternion.Euler(0f, 0f, 0f);
-
-            text_UI.text = "Press 'E' to pickup " + collided_object.name;
-
-            if (Input.GetKey("e"))
-            {
-                pickup_grabbable_object(collided_object.gameObject);
-            }
-        }
-    }
-
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        text_UI.text = "";
-    }
-
 
     private void FixedUpdate()
     {
