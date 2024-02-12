@@ -631,9 +631,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34c9c452a095a21448df5b05d14c3cad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  magazine_size: 1
-  remaining_bullets_in_magazine: 1
-  total_bullets: 8
+  magazine_size: 7
+  remaining_bullets_in_magazine: 7
+  total_bullets: 14
 --- !u!95 &566166222
 Animator:
   serializedVersion: 5
@@ -1024,7 +1024,7 @@ MonoBehaviour:
   Stamina_Bar: {fileID: 1311492418}
   Max_Stamina: 100
   Stamina: 100
-  Run_Cost: 0
+  Run_Cost: 1
   Recharge_Stamina_Rate: 10
   walk_speed: 7
   run_speed: 12
