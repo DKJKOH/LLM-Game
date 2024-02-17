@@ -83,7 +83,7 @@ public class player_movement : MonoBehaviour
 
         // Walking animation stuff
         // If player is moving
-        if (gameObject.GetComponent<Rigidbody2D>().velocity != Vector2.zero)
+        if (gameObject.GetComponent<Rigidbody2D>().velocity != Vector2.zero && playerMovement != Vector2.zero)
         {
             // Set Walking to true to activate walking animation
             gameObject.GetComponent<Animator>().SetBool("Walking", true);
