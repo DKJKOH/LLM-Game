@@ -10,6 +10,8 @@ public class doors : MonoBehaviour
     private Vector2 closed_pos;
     private Quaternion closed_rot;
 
+    public TextMesh text_UI;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -23,15 +25,13 @@ public class doors : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //Debug.Log(hingeJoint.jointAngle);
-
+        // If door joint angle is close to +/- 1 degree
         if (-1f < door_joint.jointAngle && door_joint.jointAngle < 1f)
         {
-            Debug.Log("Appleds");
-
             // Apply torque to rotate the door
             door_joint.motor = new JointMotor2D { motorSpeed = 0 * 1f, maxMotorTorque = 1000f };
 
+            // Rotates and transforms the door into the closed door position (To make it seem like the door is closed to players)
             gameObject.transform.rotation = closed_rot;
             gameObject.transform.position = closed_pos; 
             
@@ -59,9 +59,14 @@ public class doors : MonoBehaviour
         if (collided_object.CompareTag("Player"))
         {
             // Ensures that the texts are facing the correct direction (upwards positive y direction)
-            //text_UI.transform.rotation = Quaternion.Euler(0f, 0f, 0f);
+            text_UI.transform.rotation = Quaternion.Euler(0f, 0f, 0f);
 
-            //text_UI.text = "Press 'E' to pickup " + collided_object.name;
+            // If door is not fully closed
+            if (door_joint.jointAngle > 5f || door_joint.jointAngle < -5)
+            {
+                // Tells user that 'E' closes the door
+                text_UI.text = "'E' - Close Door";
+            }
 
             // If user presses "e" and the door is NOT currently closed
             if (Input.GetKey("e"))
@@ -70,5 +75,11 @@ public class doors : MonoBehaviour
                 CloseDoor();
             }
         }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        // Remove open / close door text
+        text_UI.text = "";
     }
 }
