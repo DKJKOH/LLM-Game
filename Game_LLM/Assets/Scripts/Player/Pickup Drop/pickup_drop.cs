@@ -53,6 +53,9 @@ public class pickup_drop : MonoBehaviour
         // If user has something on hand, cannot pick up item
         if (object_in_hand != null) return;
 
+        // Play pickup sound
+        gameObject.GetComponent<pickup_drop_sound>().Pickup_sound();
+
         // Set object in hand to be the grabbable object
         object_in_hand = grabbable_object;
 
@@ -87,6 +90,8 @@ public class pickup_drop : MonoBehaviour
                 // Tells user that object on hand has been dropped
                 text_UI.text = object_in_hand.name + " Dropped!";
 
+                // Play the drop weapon sound
+                gameObject.GetComponentInParent<pickup_drop_sound>().Drop_sound();
 
                 // Drop object on hand
                 drop_grabbable_object(find_item_on_hand());

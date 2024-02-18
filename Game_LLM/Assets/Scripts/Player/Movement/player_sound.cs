@@ -4,31 +4,31 @@ using UnityEngine;
 
 public class player_sound : MonoBehaviour
 {
+    // Sounds for footsteps
     [Header("Footsteps")]
     public List<AudioClip> walking_sounds;
     public List<AudioClip> running_sounds;
     public List<AudioClip> bored_idle_sounds;
 
-    private AudioSource footstep_source;
+    private AudioSource player_sound_source;
 
     // Start is called before the first frame update
     void Start()
     {
         // Retrieve footstep source
-        footstep_source = GetComponent<AudioSource>();
+        player_sound_source = GetComponent<AudioSource>();
     }
     void Play_Footsteps()
     {
-        
         // If a sound clip is currently playing, force it to stop
-        if (footstep_source.isPlaying) footstep_source.Stop();
+        if (player_sound_source.isPlaying) player_sound_source.Stop();
 
         // Initalize audioclip
         AudioClip audioClip = null;
 
         // Randomize volume and pitch of footsteps
-        footstep_source.volume = Random.Range(0.2f, 0.8f);
-        footstep_source.pitch = Random.Range(0.5f, 1f);
+        player_sound_source.volume = Random.Range(0.2f, 0.8f);
+        player_sound_source.pitch = Random.Range(0.5f, 1f);
 
         // Running
         if (gameObject.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("running"))
@@ -38,7 +38,7 @@ public class player_sound : MonoBehaviour
         }
         else if (gameObject.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("bored_idle"))
         {
-            footstep_source.volume = Random.Range(0.1f, 0.2f);
+            player_sound_source.volume = Random.Range(0.1f, 0.2f);
 
             // Randomly select a sound in the list of running sounds
             audioClip = bored_idle_sounds[Random.Range(0, bored_idle_sounds.Count)];
@@ -46,7 +46,7 @@ public class player_sound : MonoBehaviour
         // Walking
         else
         {
-            //footstep_source.volume = Random.Range(0.f, 0.2f);
+            //player_sound_source.volume = Random.Range(0.f, 0.2f);
 
             // Randomly select a sound in the list of walking sounds
             audioClip = walking_sounds[Random.Range(0, walking_sounds.Count)];
@@ -54,10 +54,10 @@ public class player_sound : MonoBehaviour
 
 
 
-        footstep_source.clip = audioClip;
+        player_sound_source.clip = audioClip;
 
         // Play the footstep
-        footstep_source.Play();
+        player_sound_source.Play();
     }
 
 
@@ -67,7 +67,7 @@ public class player_sound : MonoBehaviour
     {
         if (gameObject.GetComponent<Rigidbody2D>().velocity.x == 0 && gameObject.GetComponent<Rigidbody2D>().velocity.y == 0 &! gameObject.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("bored_idle"))
         {
-            footstep_source.Stop();
+            player_sound_source.Stop();
         }
     }
 }
