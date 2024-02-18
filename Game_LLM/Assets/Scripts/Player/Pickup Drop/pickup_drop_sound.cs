@@ -25,14 +25,12 @@ public class pickup_drop_sound : MonoBehaviour
     // Plays weapon pickup sound
     public void Pickup_sound()
     {
-        Debug.Log("Pickup Sound");
         sound_source.PlayOneShot(pickup_sound);
     }
 
     // Plays weapon drop sound
     public void Drop_sound()
     {
-        Debug.Log("Drop Sound");
         sound_source.PlayOneShot(drop_sound);
     }
 }

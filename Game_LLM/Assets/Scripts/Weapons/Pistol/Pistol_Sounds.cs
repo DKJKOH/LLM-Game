@@ -14,6 +14,10 @@ public class Pistol_Sounds : MonoBehaviour
     // Meant to check if dry fire sound should be played
     private int current_ammo_in_magazine;
 
+    void Start()
+    {
+    }
+
     // This functions plays sounds
     void Fire_sound()
     {
@@ -55,18 +59,19 @@ public class Pistol_Sounds : MonoBehaviour
         audioSource.PlayOneShot(dry_fire_sound);
     }
     // Start is called before the first frame update
-    void Start()
-    {
-        audioSource = gameObject.GetComponent<AudioSource>();
-    }
+
 
     // Update is called once per frame
     void Update()
     {
+
+        // Thre reason for placing the audio source on the hands instead of the gun object is because the gun will get disabled, stopping any sounds
+        if (transform.parent != null) audioSource = transform.parent.gameObject.GetComponent<AudioSource>();
+
         current_ammo_in_magazine = gameObject.GetComponent<Pistol>().remaining_bullets_in_magazine;
 
         // If user tries to fire weapon with no bullets in magazine, play dry fire sound
-        if (current_ammo_in_magazine == 0 && Input.GetMouseButtonDown(0)) Dry_fire_sound();
+        if (current_ammo_in_magazine == 0 && Input.GetMouseButtonDown(0) && transform.parent.gameObject != null) Dry_fire_sound();
 
     }
 }
