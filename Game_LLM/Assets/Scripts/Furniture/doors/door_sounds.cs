@@ -1,17 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 public class door_sounds : MonoBehaviour
 {
     //  How much of the angle change per update (Delta Angle aka Angle over time) before the creaking sound will be played
-    public float rotationThreshold = 0.1f;
+    public float rotationThreshold = 0.2f;
 
     // Audio clip - Creaking 
-    public AudioClip creakingSound;
+    public AudioClip creakingSound, slamSound;
 
     // Audio Source component for the door object
     private AudioSource audioSource;
+
+    private HingeJoint2D joint;
+
+    private bool door_slam;
+
 
     // Saves the angle of the hinge in the last update
     float lastAngle;
@@ -23,7 +29,16 @@ public class door_sounds : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
 
         // Loops audio source (For door creaking sound)
-        audioSource.loop = true; 
+        audioSource.loop = true;
+
+        joint = GetComponent<HingeJoint2D>();
+
+        door_slam = false;
+    }
+
+    public void DoorSlamSound()
+    {
+        door_slam = true;
     }
 
     // Update is called once per frame
@@ -36,21 +51,36 @@ public class door_sounds : MonoBehaviour
         lastAngle = transform.eulerAngles.z;
 
         // Make difference positive as angle goes from -180 to 180
-        float rotationDelta = Mathf.Abs(angle);
+        float rotationDelta = Mathf.Abs(angle) * 10;
 
-        // If Rate of change of angle is more than rotation threshold
-        if (rotationDelta > rotationThreshold)
+        if (door_slam && joint.motor.motorSpeed == 0f)
         {
-            // Volume and pitch of the creak depends on the door's angle rate of change
-            
-            // Scales volume from 0 to 1 depending on rotationDelta
-            float volume = Mathf.Clamp01(rotationDelta);
+            door_slam = false;
 
-            // Adjust pitch of clip from 1f to 2f depending on rotation delta
-            float pitch = Mathf.Lerp(1f, 2f, rotationDelta);
+            audioSource.loop = false;
 
             // Set volume and pitch for creaking sound
-            audioSource.volume = volume;
+            audioSource.volume = 1f;
+            audioSource.pitch = 1f;
+            
+            // Play door slam sound
+            audioSource.PlayOneShot(slamSound);
+
+        }
+
+        // If Rate of change of angle is more than rotation threshold
+        if (rotationDelta > rotationThreshold && joint.jointSpeed != 0 && !door_slam)
+        {
+            // Pitch of the creak depends on the door's angle rate of change
+
+            // Loops audio source (For door creaking sound)
+            audioSource.loop = true;
+
+            // Adjust pitch of clip from 1f to 2f depending on rotation delta
+            float pitch = Mathf.Lerp(.8f, 1.2f, rotationDelta);
+
+            // Set volume and pitch for creaking sound
+            audioSource.volume = Mathf.Lerp(0f, 1f, rotationDelta);
             audioSource.pitch = pitch;
 
             // If audio source is not currently playing, play creaking sound clip
@@ -58,9 +88,12 @@ public class door_sounds : MonoBehaviour
             {
                 audioSource.PlayOneShot(creakingSound);
             }
+
+            door_slam = false;
         }
+
         // Stop door creaking sound if door angle's rate of change is lesser than rotation threshold
-        else if (audioSource.isPlaying)
+        else if (audioSource.isPlaying && !door_slam && joint.motor.motorSpeed != 0f)
         {
             // Stop audio clip
             audioSource.Stop();

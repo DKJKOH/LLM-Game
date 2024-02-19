@@ -52,6 +52,9 @@ public class doors : MonoBehaviour
 
         // Apply torque to rotate the door
         door_joint.motor = new JointMotor2D { motorSpeed = rotationNeeded * 3.5f, maxMotorTorque = 1000f };
+
+        // Start door slam
+        gameObject.GetComponent<door_sounds>().DoorSlamSound();
     }
 
     // Checks if player touches door 
