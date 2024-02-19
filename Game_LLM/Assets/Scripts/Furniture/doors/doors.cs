@@ -10,6 +10,7 @@ public class doors : MonoBehaviour
     private Vector2 closed_pos;
     private Quaternion closed_rot;
 
+    // Text UI is to display instructions to player to close door
     public TextMesh text_UI;
 
     // Start is called before the first frame update
@@ -18,6 +19,7 @@ public class doors : MonoBehaviour
         // Get hingejoint component
         door_joint = GetComponent<HingeJoint2D>();
 
+        // Save the closed position and rotational value of closed door position
         closed_pos = gameObject.transform.position;
         closed_rot = gameObject.transform.rotation;
     }
@@ -25,16 +27,15 @@ public class doors : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // If door joint angle is close to +/- 1 degree
-        if (-1f < door_joint.jointAngle && door_joint.jointAngle < 1f)
+        // If door joint angle is close to +/- 6 degree
+        if (-6f < door_joint.jointAngle && door_joint.jointAngle < 6f)
         {
             // Apply torque to rotate the door
             door_joint.motor = new JointMotor2D { motorSpeed = 0 * 1f, maxMotorTorque = 1000f };
 
             // Rotates and transforms the door into the closed door position (To make it seem like the door is closed to players)
             gameObject.transform.rotation = closed_rot;
-            gameObject.transform.position = closed_pos; 
-            
+            gameObject.transform.position = closed_pos;
         }
     }
 
