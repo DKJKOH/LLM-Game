@@ -61,8 +61,6 @@ public class Pistol : MonoBehaviour
 
             // Deduct magazine by 1 bullet
             remaining_bullets_in_magazine--;
-
-            // Instantiate bullet
         }
     }
 
