@@ -45,6 +45,31 @@ public class M4A4 : MonoBehaviour
 
     }
 
+    // Refills ammunititon in magazine (if there is enough ammo)
+    void reload_M4A4()
+    {
+        // Collate total amount of bullets
+        total_bullets = total_bullets + remaining_bullets_in_magazine;
+
+        // If bullets left is lesser than magazine size
+        if (total_bullets <= magazine_size)
+        {
+            // Set remaining bullets as remaining bullets in magazine
+            remaining_bullets_in_magazine = total_bullets;
+
+            // Make sure that bullets left is 0, cannot reload anymore
+            total_bullets = 0;
+        }
+        // Reload as per normal
+        else
+        {
+            // Refill magazine
+            remaining_bullets_in_magazine = magazine_size;
+
+            // Reduce amount of bullets remaining to be used
+            total_bullets = total_bullets - magazine_size;
+        }
+    }
 
 
     // Start is called before the first frame update
@@ -90,19 +115,25 @@ public class M4A4 : MonoBehaviour
                 // Save the last shot time
                 time_last_shot = Time.time;
             }
-            // If magazine has its last bullet
-            else if (Input.GetMouseButton(0) && current_delay_time >= shoot_delay_time && remaining_bullets_in_magazine == 1)
+            else
             {
-                // Fire fire last shot
-                weapon_animator.SetTrigger("last_bullet_fire");
+                // Stop firing weapon
+                weapon_animator.SetBool("Fire", false);
+            }
+
+            // If magazine has its last bullet
+            if (Input.GetMouseButton(0) && current_delay_time >= shoot_delay_time && remaining_bullets_in_magazine == 1)
+            {
+                // fire last shot
+                weapon_animator.SetBool("fire_last_bullet", true);
 
                 // Save the last shot time
                 time_last_shot = Time.time;
             }
             else
-            {
-                // Stop firing weapon
-                weapon_animator.SetBool("Fire", false);
+            { 
+                    // fire last shot
+                    weapon_animator.SetBool("fire_last_bullet", false);
             }
 
 
