@@ -16,7 +16,7 @@ public class hands : MonoBehaviour
     public float acceleration_value;
 
     // Max distance the gun can be away from player
-    public float max_distance_threshold;
+    public float max_distance_threshold; 
 
     // Start is called before the first frame update
     void Start()
@@ -31,7 +31,7 @@ public class hands : MonoBehaviour
         object_in_hand = find_item_on_hand();
     }
 
-    // Function which checks for item the player is currently holding (TRY NOT TO RUN THIS IN UPDATE FUNCTION)
+    //Function which checks for item the player is currently holding(TRY NOT TO RUN THIS IN UPDATE FUNCTION)
     GameObject find_item_on_hand()
     {
         // If player is not holding anything, do not run this function
@@ -46,6 +46,7 @@ public class hands : MonoBehaviour
 
         return null;
     }
+
 
     /* Function which disables player's hands when they are running */
     void disable_hands_when_running()
@@ -115,25 +116,33 @@ public class hands : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // Disables hands when player is running
-        disable_hands_when_running();
+        if (gameObject.transform.childCount > 0)
+        {
+            // Disables hands when player is running
+            disable_hands_when_running();
 
-        // Get current mouse position 
-        Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            // Get current mouse position 
+            Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
-        // Get direction of object towards cursor
-        Vector3 direction = mousePos - transform.position;
+            // Get direction of object towards cursor
+            Vector3 direction = mousePos - transform.position;
 
-        // Convert direction to angle
-        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+            // Convert direction to angle
+            float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
 
-        // Rotate object about z axis
-        transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
+            // Rotate object about z axis
+            transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
+
+        }
     }
 
     private void FixedUpdate()
     {
-        // Move object on hand
-        move_grabbable_object();
+        // Do not do anything if there is nothing on hand
+        if (gameObject.transform.childCount > 0)
+        {
+            // Move object on hand
+            move_grabbable_object();
+        }
     }
 }

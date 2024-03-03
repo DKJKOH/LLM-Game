@@ -10,29 +10,47 @@ public class pickup_drop : MonoBehaviour
     // Text Prompt for picking up / dropping weapon
     public TextMesh text_UI;
 
-    public GameObject hands;
+    private GameObject current_main_hand;
+
+    public GameObject left_hand, right_hand;
 
     // Start is called before the first frame update
     void Start()
     {
         // Finds object in hand
-        object_in_hand = find_item_on_hand();
+        current_main_hand = right_hand;
     }
 
     // Function which checks for item the player is currently holding (TRY NOT TO RUN THIS IN UPDATE FUNCTION)
-    GameObject find_item_on_hand()
+    GameObject find_hand_with_object()
     {
-        // If player is not holding anything, do not run this function
-        if (hands.transform.childCount <= 0) return null;
+        //// If player is not holding anything, do not run this function
+        //if (hands.transform.childCount <= 0) return null;
 
-        // Cycle through all childrens in current game object to find the item the player is holding
-        foreach (Transform child in hands.transform)
+        //// Cycle through all childrens in current game object to find the item the player is holding
+        //foreach (Transform child in hands.transform)
+        //{
+        //    // Find the object in hand which has the "Grabbable_Object" tag and returns the game object
+        //    if (child.tag == "Grabbable_Object") return child.gameObject;
+        //}
+
+        //return null;
+
+        if (left_hand.transform.childCount > 0)
         {
-            // Find the object in hand which has the "Grabbable_Object" tag and returns the game object
-            if (child.tag == "Grabbable_Object") return child.gameObject;
+            object_in_hand = left_hand.transform.GetChild(0).gameObject;
+
+            return left_hand;
         }
 
-        return null;
+        else if (right_hand.transform.childCount > 0)
+        {
+            object_in_hand = right_hand.transform.GetChild(0).gameObject;
+
+            return right_hand;
+        }
+
+        return current_main_hand;
     }
 
     // This function removes the parent 
@@ -60,11 +78,16 @@ public class pickup_drop : MonoBehaviour
         object_in_hand = grabbable_object;
 
         // Set parent of grabbable object to be the hand
-        grabbable_object.transform.SetParent(hands.transform);
+        //grabbable_object.transform.SetParent(hands.transform);
 
-        grabbable_object.transform.position = hands.transform.position;
+        //grabbable_object.transform.position = hands.transform.position;
 
-        grabbable_object.transform.rotation = hands.transform.rotation;
+        //grabbable_object.transform.rotation = hands.transform.rotation;
+
+        object_in_hand.transform.SetParent(current_main_hand.transform);
+
+        object_in_hand.transform.position = current_main_hand.transform.position;
+        object_in_hand.transform.rotation = current_main_hand.transform.rotation;
     }
 
     IEnumerator eraseTextAfterSomeTime(float time)
@@ -80,6 +103,10 @@ public class pickup_drop : MonoBehaviour
         // Ensures that the texts are facing the correct direction (upwards positive y direction)
         text_UI.transform.rotation = Quaternion.Euler(0f, 0f, 0f);
 
+        // Finds object in hand
+        current_main_hand = find_hand_with_object();
+
+
         // If user presses "Q"
         if (Input.GetKey("q") && object_in_hand != null)
         {
@@ -94,7 +121,8 @@ public class pickup_drop : MonoBehaviour
                 gameObject.GetComponentInParent<pickup_drop_sound>().Drop_sound();
 
                 // Drop object on hand
-                drop_grabbable_object(find_item_on_hand());
+                drop_grabbable_object(object_in_hand);
+
             }
             else
             {
