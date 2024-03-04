@@ -100,6 +100,13 @@ public class shotgun : MonoBehaviour
         // Update firing delay time
         float current_delay_time = Time.time - time_last_shot;
 
+        // Ensures that muzzle flash is not active if not being shot
+        if (weapon_animator.GetCurrentAnimatorStateInfo(0).IsName("idle"))
+        {
+            // Disable muzzle flash
+            remove_muzzle_flash();
+        }
+
         // If weapon is picked up
         if (gameObject.transform.parent != null)
         {

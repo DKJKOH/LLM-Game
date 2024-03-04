@@ -45,5 +45,11 @@ public class Bullet_Collision : MonoBehaviour
             // Despawn bullet
             Destroy(gameObject);
         }
+        else if (collision.gameObject.CompareTag("Grenade"))
+        {
+            // Make grenade explode
+            collision.gameObject.GetComponent<grenade>().explode();
+        }
+        
     }
 }

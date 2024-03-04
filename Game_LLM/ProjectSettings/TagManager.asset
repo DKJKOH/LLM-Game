@@ -8,6 +8,8 @@ TagManager:
   - Muzzle Flash
   - Wall
   - Enemy
+  - Grenade
+  - Door
   layers:
   - Default
   - TransparentFX

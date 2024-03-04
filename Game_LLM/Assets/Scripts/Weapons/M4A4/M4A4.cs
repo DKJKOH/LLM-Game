@@ -94,9 +94,6 @@ public class M4A4 : MonoBehaviour
         // Get total time elapsed between current time and the time where the previous shot happened
         float current_delay_time = Time.time - time_last_shot;
 
-
-
-
         // If weapon is picked up
         if (gameObject.transform.parent != null)
         {
