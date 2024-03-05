@@ -1,0 +1,790 @@
+fileFormatVersion: 2
+guid: 89c251c3bc797cc43894ac82dcf0ebcf
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 9042651336297563149
+    second: '[PISTOL_UNLOADING]_0'
+  - first:
+      213: 3622833959611986110
+    second: '[PISTOL_UNLOADING]_1'
+  - first:
+      213: -7037316524061350217
+    second: '[PISTOL_UNLOADING]_2'
+  - first:
+      213: 6685816544654894027
+    second: '[PISTOL_UNLOADING]_3'
+  - first:
+      213: -3687089923246384987
+    second: '[PISTOL_UNLOADING]_4'
+  - first:
+      213: 8992707437439967384
+    second: '[PISTOL_UNLOADING]_5'
+  - first:
+      213: 2351461240936571567
+    second: '[PISTOL_UNLOADING]_6'
+  - first:
+      213: 3500941307460122779
+    second: '[PISTOL_UNLOADING]_7'
+  - first:
+      213: 2143606020179012848
+    second: '[PISTOL_UNLOADING]_8'
+  - first:
+      213: 4636474147552657512
+    second: '[PISTOL_UNLOADING]_9'
+  - first:
+      213: -3400564878800806515
+    second: '[PISTOL_UNLOADING]_10'
+  - first:
+      213: 3773987689302798403
+    second: '[PISTOL_UNLOADING]_11'
+  - first:
+      213: -1643709169964852009
+    second: '[PISTOL_UNLOADING]_12'
+  - first:
+      213: -4649964883272172431
+    second: '[PISTOL_UNLOADING]_13'
+  - first:
+      213: -4690547393237626976
+    second: '[PISTOL_UNLOADING]_14'
+  - first:
+      213: 7391880181130131797
+    second: '[PISTOL_UNLOADING]_15'
+  - first:
+      213: -4311580403184921395
+    second: '[PISTOL_UNLOADING]_16'
+  - first:
+      213: 4413923797943537701
+    second: '[PISTOL_UNLOADING]_17'
+  - first:
+      213: 6896903481924882680
+    second: '[PISTOL_UNLOADING]_18'
+  - first:
+      213: 7274093162269773839
+    second: '[PISTOL_UNLOADING]_19'
+  - first:
+      213: -266778093549336663
+    second: '[PISTOL_UNLOADING]_20'
+  - first:
+      213: -1177852658527677088
+    second: '[PISTOL_UNLOADING]_21'
+  - first:
+      213: 3524173141651462928
+    second: '[PISTOL_UNLOADING]_22'
+  - first:
+      213: 134503035707245899
+    second: '[PISTOL_UNLOADING]_23'
+  - first:
+      213: -4504231833765165201
+    second: '[PISTOL_UNLOADING]_24'
+  - first:
+      213: -3353571331152474417
+    second: '[PISTOL_UNLOADING]_25'
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 1
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: '[PISTOL_UNLOADING]_0'
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 320
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.9825223, y: 0.7674155}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d044ab7fa73fd7d70800000000000000
+      internalID: 9042651336297563149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '[PISTOL_UNLOADING]_1'
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 320
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.9825223, y: 0.7674155}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb0f4eaaa44e64230800000000000000
+      internalID: 3622833959611986110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '[PISTOL_UNLOADING]_2'
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 320
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.9825223, y: 0.7674155}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b6265b18ed665e90800000000000000
+      internalID: -7037316524061350217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '[PISTOL_UNLOADING]_3'
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 320
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.9825223, y: 0.7674155}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc3a59179bac8cc50800000000000000
+      internalID: 6685816544654894027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '[PISTOL_UNLOADING]_4'
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 320
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.9825223, y: 0.7674155}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a81af5ff33d4dcc0800000000000000
+      internalID: -3687089923246384987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '[PISTOL_UNLOADING]_5'
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 256
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.9825223, y: 0.7674155}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8906f99d4c38ccc70800000000000000
+      internalID: 8992707437439967384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '[PISTOL_UNLOADING]_6'
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 256
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.9825223, y: 0.7674155}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa2af114a8112a020800000000000000
+      internalID: 2351461240936571567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '[PISTOL_UNLOADING]_7'
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 256
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.9825223, y: 0.7674155}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b98f6a20297d59030800000000000000
+      internalID: 3500941307460122779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '[PISTOL_UNLOADING]_8'
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 256
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.9825223, y: 0.7674155}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0fca82b615e9fbd10800000000000000
+      internalID: 2143606020179012848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '[PISTOL_UNLOADING]_9'
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 256
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.9825223, y: 0.7674155}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 860882f0ca0185040800000000000000
+      internalID: 4636474147552657512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '[PISTOL_UNLOADING]_10'
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 192
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.9825223, y: 0.7674155}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8d986b7244cec0d0800000000000000
+      internalID: -3400564878800806515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '[PISTOL_UNLOADING]_11'
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 192
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.9825223, y: 0.7674155}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3403797dec5ef5430800000000000000
+      internalID: 3773987689302798403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '[PISTOL_UNLOADING]_12'
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 192
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.9825223, y: 0.7674155}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7dc513af73f5039e0800000000000000
+      internalID: -1643709169964852009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '[PISTOL_UNLOADING]_13'
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 192
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.9825223, y: 0.7674155}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17c75824391087fb0800000000000000
+      internalID: -4649964883272172431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '[PISTOL_UNLOADING]_14'
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 192
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.9825223, y: 0.7674155}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0afcfe75ff3d7eeb0800000000000000
+      internalID: -4690547393237626976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '[PISTOL_UNLOADING]_15'
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 128
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.9825223, y: 0.7674155}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 559f2826cdb359660800000000000000
+      internalID: 7391880181130131797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '[PISTOL_UNLOADING]_16'
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 128
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.9825223, y: 0.7674155}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc490af87703a24c0800000000000000
+      internalID: -4311580403184921395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '[PISTOL_UNLOADING]_17'
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 128
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.9825223, y: 0.7674155}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 520511aee48614d30800000000000000
+      internalID: 4413923797943537701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '[PISTOL_UNLOADING]_18'
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 128
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.9825223, y: 0.7674155}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f0994aec29b6bf50800000000000000
+      internalID: 6896903481924882680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '[PISTOL_UNLOADING]_19'
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 128
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.9825223, y: 0.7674155}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f001038f035c2f460800000000000000
+      internalID: 7274093162269773839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '[PISTOL_UNLOADING]_20'
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.9825223, y: 0.7674155}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a7c224ccb63c4cf0800000000000000
+      internalID: -266778093549336663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '[PISTOL_UNLOADING]_21'
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 64
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.9825223, y: 0.7674155}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06555b26f3d67afe0800000000000000
+      internalID: -1177852658527677088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '[PISTOL_UNLOADING]_22'
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 64
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.9825223, y: 0.7674155}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01b9b1becc068e030800000000000000
+      internalID: 3524173141651462928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '[PISTOL_UNLOADING]_23'
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 64
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.9825223, y: 0.7674155}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b45ca806cc9ddd100800000000000000
+      internalID: 134503035707245899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '[PISTOL_UNLOADING]_24'
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 64
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.9825223, y: 0.7674155}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f67cb6af201cd71c0800000000000000
+      internalID: -4504231833765165201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '[PISTOL_UNLOADING]_25'
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.9825223, y: 0.7674155}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fce09bd64a8b571d0800000000000000
+      internalID: -3353571331152474417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      '[PISTOL_UNLOADING]_0': 9042651336297563149
+      '[PISTOL_UNLOADING]_1': 3622833959611986110
+      '[PISTOL_UNLOADING]_10': -3400564878800806515
+      '[PISTOL_UNLOADING]_11': 3773987689302798403
+      '[PISTOL_UNLOADING]_12': -1643709169964852009
+      '[PISTOL_UNLOADING]_13': -4649964883272172431
+      '[PISTOL_UNLOADING]_14': -4690547393237626976
+      '[PISTOL_UNLOADING]_15': 7391880181130131797
+      '[PISTOL_UNLOADING]_16': -4311580403184921395
+      '[PISTOL_UNLOADING]_17': 4413923797943537701
+      '[PISTOL_UNLOADING]_18': 6896903481924882680
+      '[PISTOL_UNLOADING]_19': 7274093162269773839
+      '[PISTOL_UNLOADING]_2': -7037316524061350217
+      '[PISTOL_UNLOADING]_20': -266778093549336663
+      '[PISTOL_UNLOADING]_21': -1177852658527677088
+      '[PISTOL_UNLOADING]_22': 3524173141651462928
+      '[PISTOL_UNLOADING]_23': 134503035707245899
+      '[PISTOL_UNLOADING]_24': -4504231833765165201
+      '[PISTOL_UNLOADING]_25': -3353571331152474417
+      '[PISTOL_UNLOADING]_3': 6685816544654894027
+      '[PISTOL_UNLOADING]_4': -3687089923246384987
+      '[PISTOL_UNLOADING]_5': 8992707437439967384
+      '[PISTOL_UNLOADING]_6': 2351461240936571567
+      '[PISTOL_UNLOADING]_7': 3500941307460122779
+      '[PISTOL_UNLOADING]_8': 2143606020179012848
+      '[PISTOL_UNLOADING]_9': 4636474147552657512
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

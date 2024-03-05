@@ -1,0 +1,104 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: weapon_firing
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings: []
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 1
+    variantMultiplier: 1
+    packables:
+    - {fileID: 2800000, guid: 20461bfa0bdd6654bac529b6dc79380f, type: 3}
+    - {fileID: 2800000, guid: 2083f931b8a43d04ba77f1ce3a245788, type: 3}
+    bindAsDefault: 1
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: -346888739948666643, guid: 2083f931b8a43d04ba77f1ce3a245788, type: 3}
+  - {fileID: 3990930929305747477, guid: 2083f931b8a43d04ba77f1ce3a245788, type: 3}
+  - {fileID: 8267328067295508109, guid: 2083f931b8a43d04ba77f1ce3a245788, type: 3}
+  - {fileID: 4943267337586653837, guid: 2083f931b8a43d04ba77f1ce3a245788, type: 3}
+  - {fileID: -4513335084818160415, guid: 2083f931b8a43d04ba77f1ce3a245788, type: 3}
+  - {fileID: 8050534627061699431, guid: 2083f931b8a43d04ba77f1ce3a245788, type: 3}
+  - {fileID: 6695854790620136867, guid: 2083f931b8a43d04ba77f1ce3a245788, type: 3}
+  - {fileID: -5699581596933365319, guid: 2083f931b8a43d04ba77f1ce3a245788, type: 3}
+  - {fileID: 7774002998330916066, guid: 2083f931b8a43d04ba77f1ce3a245788, type: 3}
+  - {fileID: 5692632888405103184, guid: 2083f931b8a43d04ba77f1ce3a245788, type: 3}
+  - {fileID: 8703790379500112220, guid: 2083f931b8a43d04ba77f1ce3a245788, type: 3}
+  - {fileID: 729368929129544789, guid: 2083f931b8a43d04ba77f1ce3a245788, type: 3}
+  - {fileID: -7343992139205383912, guid: 2083f931b8a43d04ba77f1ce3a245788, type: 3}
+  - {fileID: -3846170517290229651, guid: 2083f931b8a43d04ba77f1ce3a245788, type: 3}
+  - {fileID: 6140261120380558374, guid: 2083f931b8a43d04ba77f1ce3a245788, type: 3}
+  - {fileID: -4001227006988722405, guid: 2083f931b8a43d04ba77f1ce3a245788, type: 3}
+  - {fileID: 5922740589556406409, guid: 20461bfa0bdd6654bac529b6dc79380f, type: 3}
+  - {fileID: -5125795109685826244, guid: 20461bfa0bdd6654bac529b6dc79380f, type: 3}
+  - {fileID: -7424278428358505202, guid: 20461bfa0bdd6654bac529b6dc79380f, type: 3}
+  - {fileID: 3654828414386283083, guid: 20461bfa0bdd6654bac529b6dc79380f, type: 3}
+  - {fileID: -2373855840365883688, guid: 20461bfa0bdd6654bac529b6dc79380f, type: 3}
+  - {fileID: 267041163348636217, guid: 20461bfa0bdd6654bac529b6dc79380f, type: 3}
+  - {fileID: -2658340452569969465, guid: 20461bfa0bdd6654bac529b6dc79380f, type: 3}
+  - {fileID: 7205122630026126091, guid: 20461bfa0bdd6654bac529b6dc79380f, type: 3}
+  - {fileID: -8764014732646240099, guid: 20461bfa0bdd6654bac529b6dc79380f, type: 3}
+  - {fileID: 1878134865071163995, guid: 20461bfa0bdd6654bac529b6dc79380f, type: 3}
+  - {fileID: 4038630327048110554, guid: 20461bfa0bdd6654bac529b6dc79380f, type: 3}
+  - {fileID: -355174562578159557, guid: 20461bfa0bdd6654bac529b6dc79380f, type: 3}
+  - {fileID: 6801360839123921183, guid: 20461bfa0bdd6654bac529b6dc79380f, type: 3}
+  - {fileID: -767490916428716224, guid: 20461bfa0bdd6654bac529b6dc79380f, type: 3}
+  - {fileID: 8931822765960510646, guid: 20461bfa0bdd6654bac529b6dc79380f, type: 3}
+  - {fileID: -3404056825376532412, guid: 20461bfa0bdd6654bac529b6dc79380f, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - '[SINGLE_SHOT] Assault_rifle_V1.00_12'
+  - '[SINGLE_SHOT] Assault_rifle_V1.00_13'
+  - '[SINGLE_SHOT] Assault_rifle_V1.00_10'
+  - '[SINGLE_SHOT] Assault_rifle_V1.00_11'
+  - '[SINGLE_SHOT] Assault_rifle_V1.00_14'
+  - '[SINGLE_SHOT] Assault_rifle_V1.00_15'
+  - '[SINGLE_SHOT] Assault_rifle_V1.00_7'
+  - '[SINGLE_SHOT] Assault_rifle_V1.00_6'
+  - '[SINGLE_SHOT] Assault_rifle_V1.00_5'
+  - '[SINGLE_SHOT] Assault_rifle_V1.00_4'
+  - '[SINGLE_SHOT] Assault_rifle_V1.00_3'
+  - '[SINGLE_SHOT] Assault_rifle_V1.00_2'
+  - '[SINGLE_SHOT] Assault_rifle_V1.00_1'
+  - '[SINGLE_SHOT] Assault_rifle_V1.00_0'
+  - '[SINGLE_SHOT] Assault_rifle_V1.00_9'
+  - '[SINGLE_SHOT] Assault_rifle_V1.00_8'
+  - '[CASING_SINGLE_SHOT] Assault_rifle_V1.00_12'
+  - '[CASING_SINGLE_SHOT] Assault_rifle_V1.00_13'
+  - '[CASING_SINGLE_SHOT] Assault_rifle_V1.00_10'
+  - '[CASING_SINGLE_SHOT] Assault_rifle_V1.00_11'
+  - '[CASING_SINGLE_SHOT] Assault_rifle_V1.00_14'
+  - '[CASING_SINGLE_SHOT] Assault_rifle_V1.00_15'
+  - '[CASING_SINGLE_SHOT] Assault_rifle_V1.00_7'
+  - '[CASING_SINGLE_SHOT] Assault_rifle_V1.00_6'
+  - '[CASING_SINGLE_SHOT] Assault_rifle_V1.00_5'
+  - '[CASING_SINGLE_SHOT] Assault_rifle_V1.00_4'
+  - '[CASING_SINGLE_SHOT] Assault_rifle_V1.00_3'
+  - '[CASING_SINGLE_SHOT] Assault_rifle_V1.00_2'
+  - '[CASING_SINGLE_SHOT] Assault_rifle_V1.00_1'
+  - '[CASING_SINGLE_SHOT] Assault_rifle_V1.00_0'
+  - '[CASING_SINGLE_SHOT] Assault_rifle_V1.00_9'
+  - '[CASING_SINGLE_SHOT] Assault_rifle_V1.00_8'
+  m_Tag: weapon_firing
+  m_IsVariant: 0
