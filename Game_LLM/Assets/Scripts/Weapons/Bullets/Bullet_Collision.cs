@@ -30,8 +30,8 @@ public class Bullet_Collision : MonoBehaviour
         // If bullet hits enemy
         else if(collision.gameObject.CompareTag("Enemy"))
         {
-            // Despawn enemy (To be replaced with enemy death animation)
-            Destroy(collision.gameObject);
+            // Enemy dies
+            collision.gameObject.GetComponent<enemy_controller>().enemyDie();
 
             // Despawn bullet
             Destroy(gameObject);

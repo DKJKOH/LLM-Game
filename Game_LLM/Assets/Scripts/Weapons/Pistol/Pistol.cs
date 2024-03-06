@@ -25,6 +25,7 @@ public class Pistol : MonoBehaviour
 
     // How long will the shooting delay be
     public float shoot_delay_time;
+    float current_delay_time;
 
     void reload_pistol()
     {
@@ -83,16 +84,30 @@ public class Pistol : MonoBehaviour
         muzzle_flash_object = gameObject.GetComponentInChildren<Light2D>();
 
         // Save start flash time as 0
-        time_last_shot = 0f;    
+        time_last_shot = 0f;
+
+        current_delay_time = 0f;
+    }
+
+    public void fire_weapon()
+    {
+        if (current_delay_time > shoot_delay_time)
+        {
+            // Save time where player last shot as now
+            time_last_shot = Time.time;
+
+            // Start pistol fire animation
+            pistol_animator.SetTrigger("fire");
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        float current_delay_time = Time.time - time_last_shot;
+        current_delay_time = Time.time - time_last_shot;
 
         // If weapon is being equipped by player
-        if (gameObject.transform.parent != null)
+        if (gameObject.transform.parent != null && gameObject.transform.parent.CompareTag("Player"))
         {
             ammo_count_text.transform.rotation = Quaternion.Euler(0f, 0f, 0f);
 
