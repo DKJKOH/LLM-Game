@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -121,18 +121,238 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Apocalypse_0
+      rect:
+        serializedVersion: 2
+        x: 185
+        y: 401
+        width: 4
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5bbb1715dc2bad49b2d739e0ac09bb0
+      internalID: 270777754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Apocalypse_1
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 486
+        width: 6
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bafdc58e419441248bcd3af8ab73a4a2
+      internalID: -1265233119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Apocalypse_2
+      rect:
+        serializedVersion: 2
+        x: 568
+        y: 13
+        width: 22
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7b441cbd7dc48241ad40b2f6dd05a44
+      internalID: 76041648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Apocalypse_3
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 164
+        width: 30
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86b2699b7a39dac4ebf66115f9318cc8
+      internalID: -203720346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Apocalypse_4
+      rect:
+        serializedVersion: 2
+        x: 475
+        y: 257
+        width: 30
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa6989913fb78984b898b9d8753d24ee
+      internalID: -164551480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Apocalypse_5
+      rect:
+        serializedVersion: 2
+        x: 506
+        y: 257
+        width: 30
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6365bb6c38942d04095c73e9ceb221da
+      internalID: 1555435289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Apocalypse_6
+      rect:
+        serializedVersion: 2
+        x: 537
+        y: 251
+        width: 30
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ff34b3a387492040b0bdb7b61dd91f8
+      internalID: 1976644249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Apocalypse_7
+      rect:
+        serializedVersion: 2
+        x: 444
+        y: 257
+        width: 30
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 406d12239b488cf48ba65a1e9ed186a4
+      internalID: 1602926516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Apocalypse_8
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 254
+        width: 93
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c133975173311d146bc9c1ed41b61bfe
+      internalID: 1412640513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Apocalypse_9
+      rect:
+        serializedVersion: 2
+        x: 641
+        y: 603
+        width: 34
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f592ee7fa23cd95449cd714ea0df7029
+      internalID: -685034249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 600fb6440d7522c4a8f1256b2ffc46b5
     internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Apocalypse_0: 270777754
+      Apocalypse_1: -1265233119
+      Apocalypse_2: 76041648
+      Apocalypse_3: -203720346
+      Apocalypse_4: -164551480
+      Apocalypse_5: 1555435289
+      Apocalypse_6: 1976644249
+      Apocalypse_7: 1602926516
+      Apocalypse_8: 1412640513
+      Apocalypse_9: -685034249
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

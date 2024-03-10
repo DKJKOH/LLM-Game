@@ -95,7 +95,9 @@ public class M4A4 : MonoBehaviour
         float current_delay_time = Time.time - time_last_shot;
 
         // If weapon is picked up
-        if (gameObject.transform.parent != null)
+        if (gameObject.transform.parent != null 
+            && GameObject.FindGameObjectWithTag("GameManager").GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("idle")
+            && Time.timeScale > 0f)
         {
             // Rotate ammo count text to be facing upwards all the time 
             ammo_count_text.transform.rotation = Quaternion.Euler(0f, 0f, 0f);

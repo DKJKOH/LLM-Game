@@ -165,41 +165,46 @@ public class grenade : MonoBehaviour
             lineRenderer.endColor = Color.green;
         }
 
-        // If user presses button down
-        if (Input.GetMouseButton(0) && gameObject.transform.parent != null)
+        // If grenade is in idle state and game is not paused
+        if (GameObject.FindGameObjectWithTag("GameManager").GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("idle")
+            && Time.timeScale > 0f)
         {
-            lineRenderer.enabled = true;
+            // If user presses button down
+            if (Input.GetMouseButton(0) && gameObject.transform.parent != null)
+            {
+                lineRenderer.enabled = true;
 
-            lineRenderer.SetPosition(0, objectPosition);
+                lineRenderer.SetPosition(0, objectPosition);
 
-            lineRenderer.SetPosition(1, mousePosition);
+                lineRenderer.SetPosition(1, mousePosition);
+            }
+            else
+            {
+                lineRenderer.enabled = false;
+            }
+
+            // If user clicks fire button
+            if (Input.GetMouseButtonDown(0) && gameObject.transform.parent != null)
+            {
+                // Play pull grenade pin sound 
+                audio_controller.PlayOneShot(pullPinSound);
+            }
+
+            if (Input.GetMouseButtonUp(0) && gameObject.transform.parent != null && distance < maximumThrowDistance)
+            {
+                // Set is thrown to be true
+                isThrown = true;
+
+                // Play throw grenade sound
+                audio_controller.PlayOneShot(throwGrenadeSound);
+
+                // Set throw target
+                throwTarget = mousePosition;
+
+                // Remove object from hand
+                gameObject.transform.SetParent(null);
+            }
+
         }
-        else
-        {
-            lineRenderer.enabled = false;
-        }
-
-        // If user clicks fire button
-        if (Input.GetMouseButtonDown(0) && gameObject.transform.parent != null)
-        {
-            // Play pull grenade pin sound 
-            audio_controller.PlayOneShot(pullPinSound);
-        }
-
-        if (Input.GetMouseButtonUp(0) && gameObject.transform.parent != null && distance < maximumThrowDistance)
-        {
-            // Set is thrown to be true
-            isThrown = true;
-
-            // Play throw grenade sound
-            audio_controller.PlayOneShot(throwGrenadeSound);
-
-            // Set throw target
-            throwTarget = mousePosition;
-
-            // Remove object from hand
-            gameObject.transform.SetParent(null);
-        }
-
     }
 }

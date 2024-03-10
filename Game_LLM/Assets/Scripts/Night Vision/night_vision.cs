@@ -18,25 +18,26 @@ public class night_vision : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.N))
-        {
-            // Get sound source component for this object and set its volume to max
-            AudioSource sound_source = gameObject.GetComponent<AudioSource>();
-            sound_source.volume = 1f;
+    }
 
-            // Toggle Night Vision Goggles active state
-            NightVisionGoggles.enabled = !NightVisionGoggles.enabled; 
-            
-            // If nvg is being turned on
-            if (!NightVisionGoggles.enabled)
-            {
-                sound_source.PlayOneShot(nvg_off_sound);
-            }
-            // If nvg is off, play turn on nvg goggles sound
-            else
-            {
-                sound_source.PlayOneShot(nvg_on_sound);
-            }
+    public void toggleOffOn()
+    {
+        // Get sound source component for this object and set its volume to max
+        AudioSource sound_source = gameObject.GetComponent<AudioSource>();
+        sound_source.volume = 1f;
+
+        // Toggle Night Vision Goggles active state
+        NightVisionGoggles.enabled = !NightVisionGoggles.enabled;
+
+        // If nvg is being turned on
+        if (!NightVisionGoggles.enabled)
+        {
+            sound_source.PlayOneShot(nvg_off_sound);
+        }
+        // If nvg is off, play turn on nvg goggles sound
+        else
+        {
+            sound_source.PlayOneShot(nvg_on_sound);
         }
     }
 }

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Explosion : MonoBehaviour
 {
@@ -22,10 +23,15 @@ public class Explosion : MonoBehaviour
     private void OnParticleCollision(GameObject other)
     {
         // If explosion hits player or enemy or door
-        if (other.CompareTag("Player") || other.CompareTag("Enemy"))
+        if (other.CompareTag("Enemy"))
         {
-            // Destroy enemy or player or door
-            Destroy(other);
+            // Enemy dies
+            other.gameObject.GetComponent<enemy_controller>().enemyDie();
+        }
+        else if (other.CompareTag("Player"))
+        {
+            // Load lose screen
+            SceneManager.LoadScene("Lose");
         }
 
         if (other.CompareTag("Grenade"))

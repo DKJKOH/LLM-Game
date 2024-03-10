@@ -101,8 +101,8 @@ public class pickup_drop : MonoBehaviour
         current_main_hand = find_hand_with_object();
 
 
-        // If user presses "Q"
-        if (Input.GetKey("q") && object_in_hand != null)
+        // If user presses "Q", item is on hand and game is not paused
+        if (Input.GetKey("q") && object_in_hand != null && Time.timeScale > 0f)
         {
             if (object_in_hand.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("idle") || object_in_hand.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("empty_magazine"))
             {

@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -121,18 +121,326 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: BloodMoney_Outro_0
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 623
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd1f1ffaa9a53a64488568b9a217ce1e
+      internalID: 1884173389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BloodMoney_Outro_1
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 567
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf5c0e368a7ddf54989f8e6fdc53f10e
+      internalID: 331273463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BloodMoney_Outro_2
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 623
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b32d11a73cd7444e8efa753c69df45b
+      internalID: -760027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BloodMoney_Outro_3
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 623
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2adde8812ba2c81409d02cf1dfee85c7
+      internalID: 366208485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BloodMoney_Outro_4
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 623
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26064b776f7ed3c4380f941b2b4af87d
+      internalID: -1417986399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BloodMoney_Outro_5
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 567
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: faa433c2f4c198b4dbe26fc6ef641953
+      internalID: 132983283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BloodMoney_Outro_6
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 623
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb74fe8f39ad86947890589c289a0183
+      internalID: 622989177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BloodMoney_Outro_7
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 607
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a76671e6b0dd9da4b8841f6cd9ec2f84
+      internalID: 1905719691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BloodMoney_Outro_8
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 607
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ed76ceea41d98e479df84213631c4e3
+      internalID: -919870853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BloodMoney_Outro_9
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 567
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 238e3e34fae273240bbdbb3022658ed6
+      internalID: -83190465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BloodMoney_Outro_10
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 567
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41b63b4afe7de6748ad1db8893d79ede
+      internalID: 1825131938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BloodMoney_Outro_11
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 685
+        width: 16
+        height: 3
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b3d6c0c84f0a204781c9d2f8f78207f
+      internalID: 1302989355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BloodMoney_Outro_12
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 672
+        width: 17
+        height: 3
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9bb3573b6b27abc40a1b9345522d33f2
+      internalID: -1857134706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BloodMoney_Outro_13
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 567
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6cb689b34af8ce4438e92b3b556962a6
+      internalID: -1887748232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 72012537f0f25bc4385d280b264e30ef
     internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      BloodMoney_Outro_0: 1884173389
+      BloodMoney_Outro_1: 331273463
+      BloodMoney_Outro_10: 1825131938
+      BloodMoney_Outro_11: 1302989355
+      BloodMoney_Outro_12: -1857134706
+      BloodMoney_Outro_13: -1887748232
+      BloodMoney_Outro_2: -760027
+      BloodMoney_Outro_3: 366208485
+      BloodMoney_Outro_4: -1417986399
+      BloodMoney_Outro_5: 132983283
+      BloodMoney_Outro_6: 622989177
+      BloodMoney_Outro_7: 1905719691
+      BloodMoney_Outro_8: -919870853
+      BloodMoney_Outro_9: -83190465
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

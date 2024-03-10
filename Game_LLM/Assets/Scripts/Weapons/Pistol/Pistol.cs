@@ -107,7 +107,10 @@ public class Pistol : MonoBehaviour
         current_delay_time = Time.time - time_last_shot;
 
         // If weapon is being equipped by player
-        if (gameObject.transform.parent != null && gameObject.transform.parent.CompareTag("Player"))
+        if (gameObject.transform.parent != null 
+            && gameObject.transform.parent.CompareTag("Player") 
+            && GameObject.FindGameObjectWithTag("GameManager").GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("idle") 
+            && Time.timeScale > 0f)
         {
             ammo_count_text.transform.rotation = Quaternion.Euler(0f, 0f, 0f);
 

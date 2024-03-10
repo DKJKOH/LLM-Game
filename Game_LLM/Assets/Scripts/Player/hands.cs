@@ -16,7 +16,7 @@ public class hands : MonoBehaviour
     public float acceleration_value;
 
     // Max distance the gun can be away from player
-    public float max_distance_threshold; 
+    public float max_distance_threshold;
 
     // Start is called before the first frame update
     void Start()

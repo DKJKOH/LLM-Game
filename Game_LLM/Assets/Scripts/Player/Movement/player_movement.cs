@@ -26,6 +26,8 @@ public class player_movement : MonoBehaviour
     // How fast does the stamina recharge when not running
     public float Recharge_Stamina_Rate;
 
+    public GameObject GPT_UI, Shop_UI, Pause_UI;
+
     // Values to store horizontal and vertical movement
     float HorizontalInput;
     float VerticalInput;
@@ -48,10 +50,21 @@ public class player_movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // Retrieve horizontal and vertical inputs
-        HorizontalInput = Input.GetAxisRaw("Horizontal");
-        VerticalInput = Input.GetAxisRaw("Vertical");
+        bool messageClosed = GameObject.FindGameObjectWithTag("GameManager").GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("idle");
 
+        // If there are no popups or chat box open or shop open or pause menue is open
+        if (messageClosed && !GPT_UI.activeSelf && !Shop_UI.activeSelf && !Pause_UI.activeSelf)
+        {
+            // Retrieve horizontal and vertical inputs
+            HorizontalInput = Input.GetAxisRaw("Horizontal");
+            VerticalInput = Input.GetAxisRaw("Vertical");
+        }
+        else
+        {
+            // Retrieve horizontal and vertical inputs
+            HorizontalInput = 0f;
+            VerticalInput = 0f;
+        }
         // Calculating the direction of input
         playerMovement = new Vector2(HorizontalInput, VerticalInput);
 
@@ -122,6 +135,7 @@ public class player_movement : MonoBehaviour
             gameObject.GetComponent<Animator>().SetBool("Walking", false);
             gameObject.GetComponent<Animator>().SetBool("Running", false);
         }
+        
     }
 
     private IEnumerator Charge_Stamina()

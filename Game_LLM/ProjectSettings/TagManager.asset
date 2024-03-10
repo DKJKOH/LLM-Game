@@ -10,6 +10,11 @@ TagManager:
   - Enemy
   - Grenade
   - Door
+  - Shop
+  - GameManager
+  - Shop_Menu
+  - GPT_Menu
+  - Bullet
   layers:
   - Default
   - TransparentFX
@@ -49,4 +54,7 @@ TagManager:
     locked: 0
   - name: Wall
     uniqueID: 1631035509
+    locked: 0
+  - name: UI
+    uniqueID: 4070051641
     locked: 0

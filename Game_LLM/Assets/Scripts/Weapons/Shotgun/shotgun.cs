@@ -107,8 +107,10 @@ public class shotgun : MonoBehaviour
             remove_muzzle_flash();
         }
 
-        // If weapon is picked up
-        if (gameObject.transform.parent != null)
+        // If weapon is picked up and time is not paused
+        if (gameObject.transform.parent != null 
+            && GameObject.FindGameObjectWithTag("GameManager").GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("idle")
+            && Time.timeScale > 0f)
         {
 
             // Rotate ammo count text to be facing upwards all the time 
@@ -117,11 +119,14 @@ public class shotgun : MonoBehaviour
             // Display ammo count (Ammo: remaining bullets in magazine / total bullets left)
             ammo_count_text.text = "Ammo: " + remaining_bullets_in_magazine.ToString() + "/" + total_bullets.ToString();
 
-
             // If player clicks fire button
-            if (Input.GetMouseButton(0) && current_delay_time >= shoot_delay_time && remaining_bullets_in_magazine > 0 && weapon_animator.GetCurrentAnimatorStateInfo(0).IsName("idle"))
+            if (Input.GetMouseButton(0)
+                && current_delay_time >= shoot_delay_time
+                && remaining_bullets_in_magazine > 0
+                && weapon_animator.GetCurrentAnimatorStateInfo(0).IsName("idle"))
             {
                 // Fire weapon
+
                 weapon_animator.SetTrigger("Fire");
 
                 // Save the last shot time

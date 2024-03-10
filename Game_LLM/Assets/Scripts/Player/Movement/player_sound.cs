@@ -27,8 +27,8 @@ public class player_sound : MonoBehaviour
         AudioClip audioClip = null;
 
         // Randomize volume and pitch of footsteps
-        player_sound_source.volume = Random.Range(0.9f, 1f);
-        player_sound_source.pitch = Random.Range(0.5f, 1f);
+        player_sound_source.volume = 1f;
+        player_sound_source.pitch = 1f;
 
         // Running
         if (gameObject.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("running"))

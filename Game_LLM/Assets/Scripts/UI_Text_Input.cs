@@ -4,8 +4,6 @@ using UnityEngine;
 
 using TMPro;
 
-// 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
-
 public class UI_Text_Input : MonoBehaviour
 {
     // This is the text output
