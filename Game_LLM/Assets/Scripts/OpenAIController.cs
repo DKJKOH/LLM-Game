@@ -47,7 +47,7 @@ public class OpenAIController : MonoBehaviour
     void Start()
     {
         // API KEY (Try not to get this out)
-        api = new OpenAIAPI("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");
+        api = new OpenAIAPI("");
 
         // If user presses the click button, wait for response
         okButton.onClick.AddListener(() => GetResponse());

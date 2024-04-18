@@ -13,19 +13,14 @@ public class hands : MonoBehaviour
     private GameObject object_in_hand;
 
     // Acceleration value
-    public float acceleration_value;
-
-    // Max distance the gun can be away from player
-    public float max_distance_threshold;
+    public float acceleration_value = 10;
+    public float maxDistance = 5;
 
     // Start is called before the first frame update
     void Start()
     {
         // Get player animator (Running / Walking / Idle / Bored walking thing)
         player_animator = gameObject.transform.parent.GetComponent<Animator>();
-
-        // Set inital acceleration value
-        acceleration_value = 10;
 
         // Finds object in hand
         object_in_hand = find_item_on_hand();
@@ -54,22 +49,24 @@ public class hands : MonoBehaviour
         // If player is not holding anything, do not run this function
         if (transform.childCount <= 0) return;
         
-
+        // Get the held object
         GameObject holding_object = gameObject.transform.GetChild(0).gameObject;
 
+        // If user has stamina
         if (gameObject.transform.parent.GetComponent<player_movement>().Stamina > 0  
+            // If user presses shift
             && (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift))
+            // If held object is currently not performing any actions
             && holding_object.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("idle")
             )
         {
-            // Disable weapon on hands
+            // Disable weapon on hands when running
             gameObject.transform.GetChild(0).gameObject.SetActive(false);
         }
         // Player can to shoot / aim when walking
         
         if(Input.GetKeyUp(KeyCode.LeftShift) || Input.GetKeyUp(KeyCode.RightShift))
         {
-           
             // Enable weapon on hand
             gameObject.transform.GetChild(0).gameObject.SetActive(true);
         }
@@ -78,39 +75,29 @@ public class hands : MonoBehaviour
     void move_grabbable_object()
     {
         // Do not do anything if there is nothing on hand
-        if (gameObject.transform.childCount <= 0)
-        {
-            return;
-        }
+        if (gameObject.transform.childCount <= 0) return;
 
         // Find hand position
         Vector2 hand_position = gameObject.transform.position;
 
         // Grabbed object position
         Vector2 grabbed_object_position = gameObject.transform.GetChild(0).position;
+
+        // Grabbed object rigidbody
         Rigidbody2D grabbed_object_rb = gameObject.transform.GetChild(0).GetComponent<Rigidbody2D>();
 
-        Vector2 direction = (hand_position - grabbed_object_position).normalized;
-
-        // Get distance between hand and object
-        float distance_hand_object = Vector3.Distance(hand_position, grabbed_object_position);
+        // If held object is too far from hand
+        if (Vector2.Distance(hand_position, grabbed_object_position) > maxDistance)
+        {
+            // Move the held object towards the hand position
+            gameObject.transform.GetChild(0).position = hand_position;
+        }
 
         // Rotate the object in hand
         gameObject.transform.GetChild(0).rotation = gameObject.transform.rotation;
 
-        // If object in hand is moved too far away, teleport it towards the player's hand
-        if (distance_hand_object < max_distance_threshold)
-        {
-            gameObject.transform.GetChild(0).position = hand_position;
-        }
-
-        // If object in hand is further than current hand position, do not apply velocity to the object in hand
-        if (grabbed_object_position == hand_position || Vector2.Dot(grabbed_object_rb.velocity, direction) < 0) return;
-        else
-        {
-            // Accelerate the object in hand towards hand position
-            gameObject.transform.GetChild(0).position = Vector2.Lerp(grabbed_object_position, hand_position, acceleration_value);
-        }
+        // Accelerate the object in hand towards hand position
+        grabbed_object_rb.velocity += (hand_position - grabbed_object_position) * acceleration_value * Time.deltaTime;
     }
 
     // Update is called once per frame
